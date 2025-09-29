@@ -1,8 +1,14 @@
 ---
-title: Mosaic_Generator
-app_file: main.py
+title: CS5330HW1
+emoji: 🐢
+colorFrom: blue
+colorTo: indigo
 sdk: gradio
 sdk_version: 5.47.2
+app_file: app.py
+pinned: false
+license: mit
+short_description: Mosaic Image Generator
 ---
 # Mosaics!
 ## Introduction
