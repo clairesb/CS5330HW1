@@ -67,11 +67,10 @@ def create_tile(image: np.ndarray, min_size) -> np.ndarray:
         most_common_color = color_counts.most_common(1)[0][0]
         most_common_color_occurrence = color_counts.most_common(1)[0][1]
     except:
-        most_common_color = (0, 0, 0)
-        most_common_color_occurrence = 0
-    color_rel_freq = most_common_color_occurrence / len(pixels)
-    small = height <= min_size or width <= min_size
+        return image
 
+    small = height <= min_size or width <= min_size
+    color_rel_freq = most_common_color_occurrence / len(pixels)
     if color_rel_freq >= COLOR_FREQUENCY_THRESHOLD or small:
         # color_rel_freq will be one if there is only one color
         recolored = np.full((height * width, 3), most_common_color, dtype=np.uint8)
