@@ -1,2 +1,6 @@
-opencv-python
-matplotlib
+numpy==2.2.6
+opencv-python==4.12.0.88
+matplotlib==3.10.6
+scikit-learn==1.7.2
+scikit-image==0.25.2
+gradio==5.47.2
